@@ -9,7 +9,7 @@ body {
 }
 body header {
   display: flex;
-  background-color: #eee;
+  background-color: #ddd;
   justify-content: space-between;
 }
 body header img {
@@ -20,30 +20,51 @@ body header img {
   cursor: pointer;
 }
 body header nav {
+  display: flex;
+  align-items: center;
   margin-right: 10px;
 }
-body header nav ul {
-  display: flex;
-  gap: 50px;
-  list-style-type: none;
-  padding: 0;
-  font-weight: 700;
-}
-body header nav ul li {
+body header nav .hamburger-menu {
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  display: none;
+}
+body header nav .hamburger-menu:focus {
+  outline: none;
+}
+body header nav .list-menu {
+  display: flex;
+  list-style-type: none;
+  font-weight: 700;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+}
+body header nav .list-menu li {
+  cursor: pointer;
+}
+body header nav .list-menu li:hover {
+  color: #9b1d1d;
 }
 
 @media only screen and (max-width: 600px) {
-  body header {
-    justify-content: space-around;
+  body header nav .hamburger-menu {
+    display: block;
   }
-  body header img {
-    margin-left: 0;
+  body header nav .list-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    border-color: f9f9f9;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
-  body header nav {
-    margin-right: 0;
-  }
-  body header nav ul {
-    gap: 15px;
-  }
+}
+.list-menu.show-me {
+  display: flex;
 }/*# sourceMappingURL=principalPage.css.map */
