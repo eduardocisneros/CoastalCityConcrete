@@ -9,14 +9,14 @@ body {
 }
 body header {
   display: flex;
-  background-color: #ddd;
   justify-content: space-between;
+  background-color: #aaa;
 }
 body header img {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  margin-left: 10px;
+  margin: 5px 0 5px 10px;
   cursor: pointer;
 }
 body header nav {
@@ -47,7 +47,7 @@ body header nav .list-menu li {
   cursor: pointer;
 }
 body header nav .list-menu li:hover {
-  color: #9b1d1d;
+  color: #c8091c;
 }
 
 @media only screen and (max-width: 600px) {
@@ -58,11 +58,19 @@ body header nav .list-menu li:hover {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 35px;
-    right: 40px;
+    top: 0;
+    right: 0;
     border-color: f9f9f9;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(100, 0, 0, 0.2);
+    width: 33%;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  body header nav .list-menu .hamburger-menu-x {
+    position: absolute;
+    top: 5px;
+    right: 12px;
   }
 }
 .list-menu.show-me {
